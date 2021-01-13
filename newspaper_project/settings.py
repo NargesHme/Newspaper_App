@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,5 @@ EMAIL_HOST_USER = 'hasheminarges76@gmail.com'
 EMAIL_HOST_PASSWORD = 'E7305DB072B3485C38615DD7294A50475D12'
 EMAIL_PORT = 2525
 EMAIL_USE_TLS = True
+
+TIME_ZONE = 'Asia/Tehran'

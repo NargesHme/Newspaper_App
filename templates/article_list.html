@@ -10,7 +10,8 @@
         <div>{{ article.body }}</div>
         
         <div>
-            <a href="#Edit">Edit</a> | <a href="#Delete">Delete</a>
+            <a href="{% url 'article_edit' article.pk %}">Edit</a> | 
+            <a href="{% url 'article_delete' article.pk %}">Delete</a>
         </div>
     {% endfor %}
     </div>

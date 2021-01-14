@@ -5,8 +5,15 @@
     </head>
 
     <body>
+        <nav>
+            <a href="{% url 'home' %}">Newspaper</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'article_new' %}">+ New</a>
+            {% endif %}
+        </nav>
         <main>
             {% block content %}
+                
             {% endblock content %}
         </main>
     </body>

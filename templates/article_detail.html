@@ -4,7 +4,7 @@
     <h1>{{article.title}}</h1>
     <div>
         <div>
-            <span>by {{article.author}}</span> |
+            <span>by {{article.author}}</span> &middot;
             <span>{{article.date}}</span>
         </div>
         <div>{{article.body}}</div>
@@ -13,6 +13,11 @@
              | <a href="{% url 'article_delete' article.pk %}">Delete</a>
         </div>
         <div><a href="{% url 'article_list' %}"></a></div>
+        <div>
+            {% for comment in article.comments.all %}
+            <span>{{comment.author}} &middot; {{comment.comment}}</span>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock content %}
